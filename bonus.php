@@ -52,7 +52,7 @@ class Bonus
 
 			if ($doNotify)
 			{
-				self::notify($emp['id'], $emp['name'], $emp['email'], 'Your bonus is ' . $bonus);
+				self::notify($emp['id'], $emp['name'], $emp['email'], $bonus);
 			}
 		}
 

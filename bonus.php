@@ -3,6 +3,7 @@
 // Author: Melnikov Savva, 2025.
 // Changes:
 //     14.05.2025: Added calcBonus function
+//     15.05.2025: Added PHPDoc
 class Bonus
 {
 	const MANAGER = 'manager';
@@ -58,7 +59,19 @@ class Bonus
 		return $result;
 	}
 
-	public function getOvertimeBonus(array $employee)
+	/**
+	 * @param array $employee
+ 	 * [
+	 * 	id = int required
+	 * 	name = string
+	 * 	mail = string
+	 * 	position = string
+  	 *	salary = int
+    	 *	experience = int
+	 * ]
+	 * @return string
+	 */
+	private function getOvertimeBonus(array $employee): int
 	{
 		if ($employee['workhours'] > 40)
 		{
